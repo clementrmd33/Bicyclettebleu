@@ -1,0 +1,196 @@
+﻿/*****************REGLAGE PAGE**********************/
+body{
+	width:100%;
+	margin: auto;
+	background-color: rgb(82, 155, 187);
+}
+#bloc_page{
+	width: 95%;
+	margin: auto;
+}
+/**************PARTIE HEADER******************/
+header{
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	max-width: 100%;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+}
+#titre{
+	display: flex;
+	width: 50%;
+	text-align: center;
+	color: blue;
+}
+header ul{
+	display: flex;
+	width: 40%;
+	padding: 0;
+}
+header li{
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	font-size: 20px;
+}
+header a{
+	text-decoration: none;
+	color: blue;
+}
+#velo{
+	padding-left: 20px;
+	color: blue;
+	width: 60px;
+	height: 60px;
+	margin-top: 5px;
+}
+
+header a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.sous-titre{
+	color: white;
+	font-size: 20px;
+	margin: 0px 0px 20px 0px;
+	padding-top: 100px;
+}
+.sous-titre2{
+	color: white;
+	font-size: 20px;
+	margin: 20px 0px 20px 0px;
+}
+/**************PARTIE SLIDER******************/
+
+#slider{
+	height: 450px;
+	background-color: rgb(33, 105, 137);
+}
+#bloc_slider{
+	position: relative;
+	height: 450px;
+	overflow: hidden;
+	width: 100%;
+}
+#image1{
+	display: flex; 
+	margin: auto;
+}
+#image2{
+	display: flex;	
+	width: 80%;
+	margin: auto;
+}
+#image3{
+	display: flex;
+	flex-direction: column;
+}
+#image3 img{
+	padding: 20px 0 20px 0;
+	align-self: center;
+	width: 370px;
+	height: 250px;
+}
+.info{
+	background-color: blue;
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-style: italic;
+	margin: auto;
+}
+#next{
+	position: absolute;
+	bottom: 208px;
+	right: 40px;
+	color: white;
+	text-align: center;
+}
+#previous{
+	position: absolute;
+	bottom: 208px;
+	left: 40px;
+	color: white;
+	text-align: center;
+}
+#pause{
+	position: absolute;
+	bottom:30px;
+	right: 40px;
+	color: white;
+	text-align: center;
+}
+#play{
+	position: absolute;
+	bottom:30px;
+	right: 90px;
+	color: white;
+	text-align: center;
+}
+#info-mediaqueries{
+	display: none;
+}
+/************MAP ET FENETRE DE RESERVATION************/
+#bloc_section{
+	display: flex;
+	justify-content: space-between;
+}
+#map {
+    height: 450px;
+    width: 65%;
+}
+#fenetre{
+	position: relative;
+	width: 30%;
+	background-color: blue;
+}
+#bloc-canvas{
+	position: absolute;
+	top: 100px;
+	left: 40px;
+	right: 40px;
+}
+#bloc-canvas p{
+	display: none;
+	font-style: italic;
+	text-align: center;
+}
+#canvas{
+	width: 100%;
+}
+#fenetre h3{
+	text-align: center;
+}
+#resa{
+	display: none;
+	margin: auto;
+}
+#enregistrer{
+	display: none;
+}
+#reset{
+	display: none;
+}
+#fermer{
+	display: none;
+}
+#canvas{
+	display: none;
+}
+#button-flex{
+	display: flex;
+	justify-content: center;
+}
+/*************************RESERVATION************************/
+#compteur{
+	color: white;
+	font-size: 20px;
+}
+/*************************FOOTER***************************/
+footer{
+	text-align: center;
+	color: white;
+	font-size: 15px;
+}

@@ -1,0 +1,57 @@
+﻿@media all and (max-width: 1024px)
+{
+	header{
+		flex-direction: column;
+	}
+	#titre{
+		width: 50%;
+		margin: auto;
+	}
+	header ul{
+		width: 100%;
+	}
+	header h1{
+		margin: auto;
+	}
+	#bloc_section{
+		flex-direction: column-reverse;
+	}
+	#map{
+		width: 100%;
+	}
+	#fenetre{
+		width: 60%;
+		margin: auto;
+		height: 500px;
+	}
+	#velo{
+		display: none;
+	}
+}
+@media all and (max-width: 600px)
+{
+	#titre{
+		width: 100%;
+	}
+	header ul{
+		flex-direction: column;
+	}
+	#slider{
+		display: none;
+	}
+	#info-mediaqueries{
+		display: block;
+		background-color:rgb(33, 105, 137);
+		text-align: center;
+		color: blue;
+	}
+	.etapes{
+		background-color: white;
+	}
+	.sous-titre{
+		padding-top: 150px;
+	}
+	#fenetre{
+		width: 100%;
+	}
+}

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<!--head-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>La Bicyclette bleue</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/petite-resolution.css">
+	<link rel="stylesheet" href="icones/font-awesome.min.css">	
+	<script type="text/javascript" src="js/4-markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgF9IPH55hVL9BMTRc-sKdtnppib3XRf4"></script>
+</head>
+<!--Corps de la page-->
+<body>
+	<!--Header-->
+	<header>
+		<div id="titre">
+			<h1>La Bicyclette bleue</h1>
+			<i class="fa fa-bicycle fa-4x" aria-hidden="true" id="velo" alt="Icone d'un velo"></i>
+		</div>
+		<!--menu-->
+		<ul>
+			<li><a href='#ancre1'>Comment ça marche</a></li>
+			<li><a href='#ancre2'>Les stations</a></li>
+			<li><a href='#ancre3'>Vos réservations</a></li>
+		</ul>		
+	</header>
+	<div id="bloc_page">
+	<!--Ancre1-->
+	<div class="sous-titre" id="ancre1">Comment ça marche</div>
+	<!--Partie 1: Slider-->
+	<div id="slider">
+		<div id="bloc_slider">
+			<div class="images" id="image1">
+				<img src="images/photo-map.png" alt="capture d'ecran de la carte google map" name="imageSlider" class="photo">
+				<div class="info" name='info'>
+					<h2>Premiere étape</h2>
+					<p> Trouver une station et cliquer sur le marqueur </p>
+				</div>
+			</div>
+			<div class="images" id="image2">
+				<img src="images/photo-station.png" alt="Capture d'ecran des informations de la station" name="imageSlider" class="photo">
+				<div class="info" name='info'>
+					<h2>Deuxieme étape</h2>
+					<p>Regarder les informations de la station et cliquez sur reserver</p>
+				</div>
+			</div>
+			<div class="images" id="image3">
+				<img src="images/photo-canvas.png" alt="capture d'ecran du canvas" name="imageSlider" class="photo">
+				<div class="info" name='info'>
+					<h2>Troisieme et dernière étape</h2>
+					<p> Signez dans la zone prévue a cet effet et votre vélo est réservé pour une durée de 20 min</p>
+				</div>
+			</div>	
+			<a href="#" id="previous"><i class="fa fa-arrow-left fa-2x" aria-hidden="true" ></i></a>
+			<a href="#" id="next"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a>
+			<a href="#" id="pause"><i class="fa fa-pause-circle fa-2x" aria-hidden="true"></i></a>
+			<a href="#" id="play"><i class="fa fa-play-circle fa-2x" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<!--Partie reservé mediaqueries-->
+	<div id="info-mediaqueries">
+		<div class="etapes">
+			<h2>Premiere étape</h2>
+			<p>Trouver une station sur la carte (ci dessous)</p>
+		</div>
+		<div class="etapes">
+			<h2>Seconde étape</h2>
+			<p>Regarder les informations de la station et cliquez sur reserver</p>
+		</div>
+		<div class="etapes">
+			<h2>Troisieme et dernière étape</h2>
+			<p> Signez dans la zone prévue a cet effet et votre vélo est réservé pour une durée de 20 min</p>
+		</div>
+	</div>
+	<!--ancre2-->
+	<div class="sous-titre2" id="ancre2">Les stations</div>
+	<!--Partie 2-->
+	<section id="bloc_section">
+		<!--Premiere sous partie: fenetre de reservation-->
+		<div id="fenetre">
+			<div id="description-fenetre">
+				<h3>Nom de la station:</h3>
+				<p id="nom"></p>
+				<h3>Statut de la station</h3>
+	            <p id="statut"></p>
+	            <h3>Adresse de la station</h3>
+	            <p id="adresse"></p>
+	            <h3>Nombre de places dispo</h3>
+	            <p id="nb_places_dispo"></p>
+	            <h3>Velo disponible</h3>
+	            <p id="velo_dispo"></p>
+	            <input type="button" id="resa" value="RESERVER">
+        	</div>
+        	<!--Canvas qui apparait lors de la reservation-->
+           	<div id="bloc-canvas">
+           		<p id="description-canvas">Veuillez faire une signature dans la zone prevue à cet effet</p>
+            	<canvas id="canvas"></canvas>
+            	<div id="button-flex">
+	            	<input type="button" id="enregistrer" value = 'Enregistrer'> 
+	            	<input type="reset" id="reset" value = "Effacer" > 
+	            	<input type="button" id="fermer" value="Fermer">  
+	            	<div id='obligatoire'></div> 
+        		</div> 
+            </div>  
+		</div>
+		<!--Seconde sous partie : Map-->		
+		<div id="map"></div>
+	</section>
+	<!--Ancre 3-->
+	<div class="sous-titre2" id="ancre3">Vos réservations</div>
+	<!--Partie 3 : Compteur-->
+	<section id="reservation">
+		<div id="reservation-velib"></div>
+		<div id='compteur'>
+			<p><span id="minutes"></span><span id="secondes"></span></p>
+		</div>
+	</section>
+	<!--Footer-->
+	<footer>
+		<p>Mention légale | Site concu par Clément RAYMOND pour la formation Openclassroom</p>
+	</footer>
+		<script src="js/1-slider.js"></script>
+		<script src="js/2-ajax.js"></script>	
+		<script src="js/3-map.js"></script>
+		<script src="js/5-canvas.js"></script>
+		<script src="js/6-compteur.js"></script>
+		<script src="js/7-reload.js"></script>
+	</div>
+</body>
+</html>
